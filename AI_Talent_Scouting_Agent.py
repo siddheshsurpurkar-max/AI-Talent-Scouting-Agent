@@ -24,7 +24,8 @@ st.markdown("""
 class TalentScoutAgent:
     def __init__(self):
         self.skill_bank = ["python", "java", "react", "angular", "node", "aws", "azure", "docker", "kubernetes", 
-                          "sql", "nosql", "machine learning", "ml", "ai", "data science", "tableau", "excel", "c++"]
+                          "sql", "nosql", "machine learning", "ml", "ai", "data science", "tableau", "excel", "c++",
+                          "sales", "communication", "mutual funds", "hni client acquisation"]
 
     def extract_text(self, file):
         try:
