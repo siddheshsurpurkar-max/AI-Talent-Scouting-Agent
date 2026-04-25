@@ -198,7 +198,7 @@ def main():
                 "shortlist.csv", 
                 "text/csv"
             )
-
+            
         # DECISION LOGS
         st.subheader("🔍 Agent Intelligence Logs")
         lcol, rcol = st.columns(2)
@@ -206,10 +206,11 @@ def main():
             target = lcol if i % 2 == 0 else rcol
             with target.expander(f"Analysis for {row['Candidate']}"):
                 st.write(f"**Found Skills:** {row['Skills Found'] if row['Skills Found'] else 'None'}")
-                if row['Missing']: st.write(f"**Gap Analysis:** Missing {row['Missing']}")
+                if row['Missing']: 
+                    st.write(f"**Gap Analysis:** Missing {row['Missing']}")
                 st.divider()
                 st.write(f"**Agent Engagement:**")
-                st.italic(f"\"{row['Response']}\"")
+                st.markdown(f"*\"{row['Response']}\"*")
                 st.progress(row['Interest Score']/100, text=f"Interest Level: {row['Interest Score']}%")
 
 if __name__ == "__main__":
